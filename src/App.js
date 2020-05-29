@@ -10,7 +10,7 @@ import {
 } from 'reactstrap';
 import PropTypes from 'prop-types';
 
-import Footer from './components/footer/Footer';
+import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
@@ -29,7 +29,7 @@ class App extends Component {
       home: {
         title: 'Full Stack Developer',
         subTitle: 'Developing Skills',
-        text: 'Here are some projects I have done...'
+        text: 'Here are some projects I have worked on...'
       },
       about: {
         title: 'About Me',
@@ -63,20 +63,20 @@ class App extends Component {
               className="border-bottom"
               bg="transparent"
               expand="lg">
-              <NavbarBrand className="mr-auto">James Ian R. Solima</NavbarBrand>
+              <NavbarBrand className="mr-auto">Welcome</NavbarBrand>
               <NavbarToggler
                 onClick={this.toggleNavbar}
                 className="mr-2 border-0" />
               <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav className="ml-auto" navbar>
-                  <Link className="nav-link" to="/">Home</Link>
+                  <Link className="nav-link" to="/portfolio">Home</Link>
                   <Link className="nav-link" to="/about">About</Link>
                   <Link className="nav-link" to="/contact">Contact</Link>
                 </Nav>
               </Collapse>
             </Navbar>
             <Route
-              path="/"
+              path="/portfolio"
               exact
               render={() =>
                 <HomePage

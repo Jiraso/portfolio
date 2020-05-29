@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { 
     Form, 
     FormGroup,
@@ -6,52 +6,33 @@ import {
     Input,
     Button } from 'reactstrap';
 
-import Content from '../components/Content';
-import Hero from '../components/Hero';
+import Content from './Content';
 
-
-class ContactPage extends React.Component {
+export default class ContactForm extends Component {
     constructor(props){
         super(props);
         this.state={
-            name:'',
-            email: '',
-            message: '',
-            disabled: false,
-            emailSent: null
+
         }
     }
-
-    handleChange= e =>{
-        const target = e.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-        this.setState({ [name] :value })
+    
+    handleChange=(e)=>{
+        this.props.onChange(e)
     }
 
-    handleSubmit= e =>{
-        e.preventDefault();
 
-        this.setState({
-            disabled:true,
-            //put in a conditional statement here for if email is sent or not
-            emailSent: false
-        })
-    }
-
-    render(){
-    return(
-        <React.Fragment>
-         <Hero title={this.props.title}></Hero>
-         <Content>
-                <Form onSubmit={this.handleSubmit}>
+    render() {
+        return (
+            <div>
+                <Content>
+                <Form>
                     <FormGroup>
                         <Label for="full-name">Full Name</Label>
                         <Input
                             id="full-name"
                             name="name"
                             type="text"
-                            value={this.state.name}
+                            value={this.props.children}
                             onChange={this.handleChange}>
                         </Input>
                     </FormGroup>
@@ -61,36 +42,32 @@ class ContactPage extends React.Component {
                             id="email"
                             name="email"
                             type="email"
-                            value={this.state.email}
+                            value={this.state.children}
                             onChange={this.handleChange}>
                         </Input>
                     </FormGroup>
                     <FormGroup>
                         <Label for="message">Message</Label>
                         <Input
-                            id="message"
+                            id="full-name"
                             name="message"
                             type="textarea"
                             rows="3"
-                            value={this.state.message}
+                            value={this.state.children}
                             onChange={this.handleChange}>
                         </Input>
                     </FormGroup>
                     <Button
                         className="d-inline-block"
-                        color="primary"
+                        variant="primary"
                         type="submit"
                         disabled={this.state.disabled}
                         onClick={this.handleSubmit}>
                         Send
                     </Button>
-                    {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
-                    {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
                 </Form>
                 </Content>
-        </React.Fragment>
-    )
+            </div>
+        )
+    }
 }
-}
-
-export default ContactPage

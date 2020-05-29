@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Hero from '../components/hero/Hero';
+import Hero from '../components/Hero';
+import Carousel from '../components/Carousel'
 
 function HomePage(props){
     return(
@@ -9,6 +10,8 @@ function HomePage(props){
             title={props.title}
             subTitle={props.subTitle}
             text={props.text}/>
+        <Carousel/>
+        
         </React.Fragment>
     )
 }
