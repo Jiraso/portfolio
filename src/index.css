@@ -47,3 +47,52 @@ code {
   color: #EE6352;
   padding: 10px 15px;
 }
+
+.showall{
+	border:3px solid black;
+	width:150px;
+	text-align:center;
+	position:relative;
+	left:45%;
+	border-radius:10px;
+	margin-bottom:20px;
+}
+.showall:hover, .showall a:hover{
+	background-color: hsl(190,70%,90%);
+}
+#contact{
+	display:block;
+}
+#contact h2{
+	display:block;
+	position:relative;
+	left:40%;
+	font-size: 4em;
+	padding-top:20px;
+}
+#contact-container{
+	position:relative;
+	left:40%;
+	margin-top:5%;
+}
+.contact-details{
+	margin:6px;
+}
+.contact-details img{
+	border:2px solid black;
+	border-radius:50%;
+	padding:5px;
+	background-color: hsl(0,100%,100%)
+}
+.contact-details.linkedin img:hover{
+	background-color: #0077B5;
+}
+.contact-details.facebook img:hover{
+	background-color: #1778f2;
+}
+.contact-details.github img:hover{
+	background-color: hsl(0, 0%, 73%);
+}
+.contact-details.personal-email img:hover{
+	background-color: hsl(113, 58%, 69%);
+}
