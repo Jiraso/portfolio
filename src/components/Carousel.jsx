@@ -4,8 +4,9 @@ import {
     Row,
 } from 'reactstrap';
 import hublink from '../assets/hublink.png';
-import comingsoon from '../assets/comingsoon.jpg'
-import Card from './Card'
+import cubeRunner from '../assets/CubeRunnerIcon.png';
+import comingsoon from '../assets/comingsoon.jpg';
+import Card from './Card';
 
 
 class Carousel extends React.Component {
@@ -23,10 +24,10 @@ class Carousel extends React.Component {
                 },
                 {
                     id: 1,
-                    title: 'More Projects',
-                    subTitle: 'Coming soon',
-                    imgSrc: comingsoon,
-                    link: '',
+                    title: 'Cube Runner',
+                    subTitle: 'Made in Unity',
+                    imgSrc: cubeRunner,
+                    link: 'https://gamejolt.net/?token=BB2ScnXvjZXaYM6Z843Gtm9ncg6fHm',
                     selected: false,
                 },
                 {

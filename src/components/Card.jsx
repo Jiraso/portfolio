@@ -10,7 +10,8 @@ function Card(props){
             <img 
             className="j-card-image" 
             src={props.item.imgSrc} 
-            alt={props.item.imgSrc}/>
+            alt={props.item.imgSrc}
+            />
             
             {props.item.selected && 
             <CardInfo 
