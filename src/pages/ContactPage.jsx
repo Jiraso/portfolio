@@ -1,10 +1,5 @@
 import React from 'react';
 import {
-    Form,
-    FormGroup,
-    Label,
-    Input,
-    Button,
     Container
 } from 'reactstrap';
 
@@ -46,50 +41,6 @@ class ContactPage extends React.Component {
             <React.Fragment>
                 <Hero title={this.props.title}></Hero>
                 <Content>
-                    {/* <Form onSubmit={this.handleSubmit}>
-                    <FormGroup>
-                        <Label for="full-name">Full Name</Label>
-                        <Input
-                            id="full-name"
-                            name="name"
-                            type="text"
-                            value={this.state.name}
-                            onChange={this.handleChange}>
-                        </Input>
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="email">Email</Label>
-                        <Input
-                            id="email"
-                            name="email"
-                            type="email"
-                            value={this.state.email}
-                            onChange={this.handleChange}>
-                        </Input>
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="message">Message</Label>
-                        <Input
-                            id="message"
-                            name="message"
-                            type="textarea"
-                            rows="3"
-                            value={this.state.message}
-                            onChange={this.handleChange}>
-                        </Input>
-                    </FormGroup>
-                    <Button
-                        className="d-inline-block"
-                        color="primary"
-                        type="submit"
-                        disabled={this.state.disabled}
-                        onClick={this.handleSubmit}>
-                        Send
-                    </Button>
-                    {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
-                    {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
-                </Form> */}
-
                     <Container id="contact">
                         <div id="contact-container">
                             <a
